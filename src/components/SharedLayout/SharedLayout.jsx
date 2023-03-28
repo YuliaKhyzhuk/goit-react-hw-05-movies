@@ -2,6 +2,6 @@ import React from "react";
 import { Suspense } from 'react';
 import { Outlet } from "react-router-dom";
 
-const HomePage = () => {}
+const SharedLayout = () => {}
 
-export default HomePage;
+export default SharedLayout;

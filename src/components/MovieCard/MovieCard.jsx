@@ -1,12 +1,8 @@
 import React from "react";
-import { Vortex } from "react-loader-spinner";
-import { NavLink, useLocation } from "react-router-dom";
 
 const MovieCard = ({movie}) => {
     const { release_date, poster_path, overview, title, vote_average, genres  } = movie;
     const year = parseInt(release_date);
-    const location = useLocation();
-  
 
     return (
         <div>

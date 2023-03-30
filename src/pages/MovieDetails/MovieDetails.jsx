@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { Suspense } from 'react';
 import { Outlet, useLocation, useParams, NavLink } from 'react-router-dom';
 import { getMovieById } from '../../services/themoviedbApi';
@@ -38,7 +38,7 @@ const { movieId } = useParams();
   return (
     <div>
       <div>
-        <NavLink to={goBackLink}>Go back</>
+        <NavLink to={goBackLink}>Go back</NavLink>
       </div>
       <div>
         {isLoading && <Loader />}
@@ -46,7 +46,11 @@ const { movieId } = useParams();
         {error !== 0 && <p>Something went wrong! Please try again!</p>}
 
         {movieById && <MovieCard movie={movieById} />}
-
+        <div>
+        <h3>Additional Information</h3>
+        <NavLink to="cast" state={{from: goBackLink}}>Cast</NavLink>
+        <NavLink to="reviews" state={{from: goBackLink}}>Reviews</NavLink>
+        </div>
         <Outlet />
       </div>
     </div>

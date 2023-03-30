@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieCard = ({movie}) => {
+export const MovieCard = ({movie}) => {
     const { release_date, poster_path, overview, title, vote_average, genres  } = movie;
     const year = parseInt(release_date);
 

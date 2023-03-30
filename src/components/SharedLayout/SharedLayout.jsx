@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
-import { Loader } from './Loader/Loader';
+import { Loader } from 'components/Loader/Loader';
 
-const SharedLayout = () => {
+
+export const SharedLayout = () => {
   return (
     <nav>
       <NavLink to="/">Home</NavLink>

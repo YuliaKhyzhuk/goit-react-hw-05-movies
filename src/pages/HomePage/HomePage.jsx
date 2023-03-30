@@ -4,7 +4,7 @@ import { getTrendingMovies } from '../../services/themoviedbApi';
 import { MovieList } from 'components/MovieList/MovieList';
 import { Loader } from 'components/Loader/Loader';
 
-const HomePage = () => {
+export const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -30,7 +30,7 @@ const HomePage = () => {
       {isLoading && <Loader />}
 
       {error !== 0 && <p>Something went wrong! Please try again!</p>}
-      
+
       <MovieList movies={trendingMovies} title={'Trending today'} />
     </div>
   );

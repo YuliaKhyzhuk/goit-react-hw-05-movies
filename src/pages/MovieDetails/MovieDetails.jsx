@@ -5,7 +5,7 @@ import { getMovieById } from '../../services/themoviedbApi';
 import { Loader } from 'components/Loader/Loader';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 
-const MovieDetails = () => {
+export const MovieDetails = () => {
   const [movieById, setMovieById] = useState([]);
 const { movieId } = useParams();
   const [isLoading, setIsLoading] = useState(false);

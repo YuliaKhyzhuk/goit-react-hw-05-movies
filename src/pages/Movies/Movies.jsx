@@ -5,7 +5,7 @@ import { MovieList } from 'components/MovieList/MovieList';
 import { Searchbar } from 'components/Searchbar/Searchbar';
 import { Loader } from 'components/Loader/Loader';
 
-const Movies = () => {
+export const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);

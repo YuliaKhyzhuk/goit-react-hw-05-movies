@@ -1,7 +1,7 @@
 import React from "react";
 import { Circles } from 'react-loader-spinner';
 
-const Loader = () => {
+export const Loader = () => {
     return (
         <div>
           <Circles

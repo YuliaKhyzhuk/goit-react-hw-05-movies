@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Searchbar = ({ onSubmit }) => {
+export const Searchbar = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
 
   const handleSubmit = event => {

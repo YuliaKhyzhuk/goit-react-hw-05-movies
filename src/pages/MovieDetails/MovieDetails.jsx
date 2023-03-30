@@ -22,7 +22,9 @@ const { movieId } = useParams();
       try {
         setIsLoading(true);
         const response = await getMovieById(movieId);
-        setMovieById(response.results);
+        // setMovieById(response.results);
+        setMovieById(response);
+
       } catch (error) {
         setError(error.message);
         console.log('getMovieById:', error.message);
@@ -36,13 +38,13 @@ const { movieId } = useParams();
   return (
     <div>
       <div>
-        <NavLink to={goBackLink}>Go back</NavLink>
+        <NavLink to={goBackLink}>Go back</>
       </div>
       <div>
         {isLoading && <Loader />}
 
         {error !== 0 && <p>Something went wrong! Please try again!</p>}
-        
+
         {movieById && <MovieCard movie={movieById} />}
 
         <Outlet />

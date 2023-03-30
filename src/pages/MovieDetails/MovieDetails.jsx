@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { Suspense } from 'react';
 import { Outlet, useLocation, useParams, NavLink } from 'react-router-dom';
 import { getMovieById } from '../../services/themoviedbApi';
 

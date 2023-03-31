@@ -13,6 +13,12 @@ export const HomeNavLink = styled(NavLink)`
   font-weight: bald;
   color: ${props => props.theme.colors.secondaryWhite};
   margin-bottom: 10px;
+//   padding-left: (100% - 71px) / 2);
+//   padding-right: (100% - 71px) / 2);
+//   padding-top: auto;
+//   padding-bottom: auto;
+
+
 `;
 
 export const HomeNavLinkContainer = styled.div`
@@ -44,6 +50,9 @@ export const MoviesNavLink = styled(NavLink)`
   font-weight: bald;
   color: ${props => props.theme.colors.secondaryWhite};
   margin-bottom: 10px;
+  //   padding-left: 25%;
+  //   padding-right: 25%;
+
 `;
 
 export const MoviesLinkContainer = styled.div`

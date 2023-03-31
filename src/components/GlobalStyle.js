@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 
   }
-  
+  background: ${props => props.theme.colors.backgroundPrimary};
   *,
   *::before,
   *::after {
@@ -17,6 +17,7 @@ body {
   }
   
   body {
+
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;

@@ -9,5 +9,5 @@ export const AppContainer = styled.div`
   padding-left: 24px;
   padding-right: 24px;
 height: 100vh;
-  background-color: ${props => props.theme.colors.backgroundPrimary};
+//   background-color: ${props => props.theme.colors.backgroundPrimary};
 `;

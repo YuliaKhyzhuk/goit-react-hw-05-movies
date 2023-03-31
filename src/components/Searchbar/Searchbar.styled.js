@@ -1,42 +1,42 @@
 import styled from 'styled-components';
 
 export const SearchForm = styled.form`
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 10px;
-margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 `;
 
 export const SearchFormButton = styled.button`
-padding: 6px;
-font-weight: bold;
-cursor: pointer;
-font-size: 15px;
-outline: none;
-border-radius: ${props => props.theme.borderRadius.sm};
-color: ${props => props.theme.colors.secondaryWhite};
-background-color: ${props => props.theme.colors.primaryAccent};
-box-shadow: ${props => {
-  return ` 0 1px 3px ${props.theme.colors.secondaryAccent}`;
-}};
-transition: ${props => props.theme.transition};
+  padding: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  outline: none;
+  border-radius: ${props => props.theme.borderRadius.sm};
+  color: ${props => props.theme.colors.secondaryWhite};
+  background-color: ${props => props.theme.colors.primaryAccent};
+  box-shadow: ${props => {
+    return ` 0 1px 3px ${props.theme.colors.secondaryAccent}`;
+  }};
+  transition: ${props => props.theme.transition};
 
-&:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
 `;
 
 export const SearchFormButtonLabelut = styled.span`
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   padding: 0;
-//   overflow: hidden;
-//   clip: rect(0, 0, 0, 0);
-//   white-space: nowrap;
-//   clip-path: inset(50%);
-//   border: 0;
+  //   position: absolute;
+  //   width: 1px;
+  //   height: 1px;
+  //   padding: 0;
+  //   overflow: hidden;
+  //   clip: rect(0, 0, 0, 0);
+  //   white-space: nowrap;
+  //   clip-path: inset(50%);
+  //   border: 0;
 `;
 
 export const SearchFormInput = styled.input`
@@ -55,4 +55,5 @@ transition: ${props => props.theme.transition};
 &:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   outline: none;
+  
 `;

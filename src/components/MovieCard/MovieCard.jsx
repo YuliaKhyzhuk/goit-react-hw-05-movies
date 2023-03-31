@@ -6,7 +6,7 @@ export const MovieCard = ({movie}) => {
 
     return (
         <div>
-            <img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt={overview} width="370px"/>
+            <img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt={overview} width="220px"/>
             <div>
                 <h2>{title}</h2>
                 <p>Year: {year}</p>

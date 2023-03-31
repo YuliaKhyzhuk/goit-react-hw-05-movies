@@ -5,6 +5,9 @@ import { getMovieById } from '../../services/themoviedbApi';
 import { Loader } from 'components/Loader/Loader';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 
+import { GoBackNavLinkContainer, GoBackNavLink, CastNavLink, CastNavLinkContainer, ReviewsNavLink, ReviewsLinkContainer } from './MovieDetails.styled';
+
+
 export const MovieDetails = () => {
   const [movieById, setMovieById] = useState([]);
 const { movieId } = useParams();
@@ -37,9 +40,9 @@ const { movieId } = useParams();
 
   return (
     <div>
-      <div>
-        <NavLink to={goBackLink}>Go back</NavLink>
-      </div>
+      <GoBackNavLinkContainer>
+        <GoBackNavLink to={goBackLink}>Go back</GoBackNavLink>
+      </GoBackNavLinkContainer>
       <div>
         {isLoading && <Loader />}
 
@@ -48,8 +51,12 @@ const { movieId } = useParams();
         {movieById && <MovieCard movie={movieById} />}
         <div>
         <h3>Additional Information</h3>
-        <NavLink to="cast" state={{from: goBackLink}}>Cast</NavLink>
-        <NavLink to="reviews" state={{from: goBackLink}}>Reviews</NavLink>
+        <CastNavLinkContainer>
+        <CastNavLink to="cast" state={{from: goBackLink}}>Cast</CastNavLink>
+        </CastNavLinkContainer>
+        <ReviewsLinkContainer>
+        <ReviewsNavLink to="reviews" state={{from: goBackLink}}>Reviews</ReviewsNavLink>
+        </ReviewsLinkContainer>
         </div>
         <Outlet />
       </div>

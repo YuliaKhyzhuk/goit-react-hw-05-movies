@@ -4,6 +4,9 @@ import { getMovieCredits } from '../../services/themoviedbApi';
 
 import { Loader } from 'components/Loader/Loader';
 
+import { CastListContainer, CastListContainerItem } from './Cast.styled';
+
+
 const Cast = () => {
   const [movieCast, setMovieCast] = useState([]);
   const { movieId } = useParams();
@@ -40,18 +43,18 @@ const Cast = () => {
 
       {error && <p>Something went wrong! Please try again!</p>}
 
-      <ul>
+      <CastListContainer>
         {movieCast.length > 0 && movieCast.map(actor => {
             // console.log("actor:", actor);
             return (
-                <li key={actor.id}>
+                <CastListContainerItem key={actor.id}>
                     <h4>{actor.name}</h4>
                     <img src={actor.profile_path ? `https://image.tmdb.org/t/p/w200${actor.profile_path}` : defaultImg} alt={actor.name} width="240px" />
                     <p>{actor.character}</p>
-                </li>
+                </CastListContainerItem>
             )
         })}
-      </ul>
+      </CastListContainer>
     </div>
   );
 };

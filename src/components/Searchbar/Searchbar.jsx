@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import {
+  SearchForm,
+  SearchFormButton,
+  SearchFormButtonLabelut,
+  SearchFormInput,
+} from './Searchbar.styled';
+
 export const Searchbar = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
 
@@ -8,23 +15,33 @@ export const Searchbar = ({ onSubmit }) => {
     event.preventDefault();
 
     if (query.trim() === '') {
-        alert('Please enter a query!');
-        return;
+      alert('Please enter a query!');
+      return;
     }
 
     onSubmit(query);
-    setQuery('');    
-};
+    setQuery('');
+  };
 
   const handleQueryChange = event => {
-setQuery(event.currentTarget.value.toLowerCase());
+    setQuery(event.currentTarget.value.toLowerCase());
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="query" value="query" placeholder="Search movies" autoComplete='off' autofocus onChange={handleQueryChange} />
-      <button type="submit">Search</button>
-    </form>
+    <SearchForm onSubmit={handleSubmit}>
+      <SearchFormInput
+        type="text"
+        name="query"
+        value={query}
+        placeholder="Search movies"
+        autoComplete="off"
+        autoFocus
+        onChange={handleQueryChange}
+      />
+      <SearchFormButton type="submit">
+        <SearchFormButtonLabelut>Search</SearchFormButtonLabelut>
+      </SearchFormButton>
+    </SearchForm>
   );
 };
 

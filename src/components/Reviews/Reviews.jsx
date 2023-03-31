@@ -18,7 +18,7 @@ const Reviews = () => {
             setIsLoading(true);
             const response = await getMovieReviews(movieId);
             // setMovieById(response.results);
-            setMovieReviews(response);
+            setMovieReviews(response.results);
           } catch (error) {
             setError(error.message);
             console.log('getMovieReviews:', error.message);
@@ -26,14 +26,17 @@ const Reviews = () => {
             setIsLoading(false);
           }
         };
-        getMovieReviewsFromApi();
+        getMovieReviewsFromApi(movieId);
       }, [movieId]);
+
+      console.log(movieId);
+      console.log("movieReviews:", movieReviews);
 
       return (
         <div>
           {isLoading && <Loader />}
     
-          {error !== 0 && <p>Something went wrong! Please try again!</p>}
+          {error && <p>Something went wrong! Please try again!</p>}
 
           {movieReviews.length === 0 && <p>No reviews found</p>}
           <ul>

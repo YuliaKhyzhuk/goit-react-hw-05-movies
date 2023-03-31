@@ -28,7 +28,7 @@ export const Movies = () => {
         setIsLoading(false);
       }
     };
-    getMovieByQueryFromApi();
+    getMovieByQueryFromApi(query);
   }, [query]);
 
   const handleSearchFormSubmit = query => {
@@ -45,9 +45,9 @@ export const Movies = () => {
 
       {isLoading && <Loader />}
 
-      {error !== 0 && <p>Something went wrong! Please try again!</p>}
+      {error && <p>Something went wrong! Please try again!</p>}
 
-      {movies.length > 0 && <MovieList movies={movies} title={'Trending today'} />}
+      {movies.length > 0 && <MovieList movies={movies}  />}
 
       {query && movies.length === 0 && (
         <p>No movies found! Please try another title! </p>

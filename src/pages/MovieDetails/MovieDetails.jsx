@@ -8,6 +8,7 @@ import { MovieCard } from 'components/MovieCard/MovieCard';
 export const MovieDetails = () => {
   const [movieById, setMovieById] = useState([]);
 const { movieId } = useParams();
+// console.log('kjhkj', movieId);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -31,7 +32,7 @@ const { movieId } = useParams();
         setIsLoading(false);
       }
     };
-    getMovieByIdFromApi();
+    getMovieByIdFromApi(movieId);
   }, [movieId]);
 
   return (
@@ -42,7 +43,7 @@ const { movieId } = useParams();
       <div>
         {isLoading && <Loader />}
 
-        {error !== 0 && <p>Something went wrong! Please try again!</p>}
+        {error && <p>Something went wrong! Please try again!</p>}
 
         {movieById && <MovieCard movie={movieById} />}
         <div>

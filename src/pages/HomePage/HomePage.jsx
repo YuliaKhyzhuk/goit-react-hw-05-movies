@@ -15,6 +15,7 @@ export const HomePage = () => {
         setIsLoading(true);
         const response = await getTrendingMovies();
         setTrendingMovies(response.results);
+        console.log(response.results);
       } catch (error) {
         setError(error.message);
         console.log('getTrendingMovies error:', error.message);
@@ -25,11 +26,13 @@ export const HomePage = () => {
     getTrendingMoviesFromApi();
   }, []);
 
+  console.log("Homepage error:", error);
+
   return (
     <div>
       {isLoading && <Loader />}
 
-      {error !== 0 && <p>Something went wrong! Please try again!</p>}
+      {error && <p>HOMEPAGE Something went wrong! Please try again!</p>}
 
       <MovieList movies={trendingMovies} title={'Trending today'} />
     </div>

@@ -20,7 +20,7 @@ const Cast = () => {
         setIsLoading(true);
         const response = await getMovieCredits(movieId);
         // setMovieById(response.results);
-        setMovieCast(response);
+        setMovieCast(response.cast);
       } catch (error) {
         setError(error.message);
         console.log('getMovieCredits:', error.message);
@@ -28,18 +28,22 @@ const Cast = () => {
         setIsLoading(false);
       }
     };
-    getMovieCastFromApi();
+    getMovieCastFromApi(movieId);
   }, [movieId]);
+
+  console.log(movieId);
+  console.log("movieCast:", movieCast);
 
   return (
     <div>
       {isLoading && <Loader />}
 
-      {error !== 0 && <p>Something went wrong! Please try again!</p>}
+      {error && <p>Something went wrong! Please try again!</p>}
 
       <ul>
         {movieCast.length > 0 && movieCast.map(actor => {
-            return(
+            // console.log("actor:", actor);
+            return (
                 <li key={actor.id}>
                     <h4>{actor.name}</h4>
                     <img src={actor.profile_path ? `https://image.tmdb.org/t/p/w200${actor.profile_path}` : defaultImg} alt={actor.name} width="240px" />

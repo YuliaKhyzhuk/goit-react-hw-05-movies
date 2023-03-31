@@ -3,16 +3,9 @@ import { NavLink } from 'react-router-dom';
 
 export const NavContainer = styled.nav`
   display: flex;
-  // flex-direction: column;
   justify-content: center;
-  //   align-items: center;
   color: ${props => props.theme.colors.secondaryWhite};
   margin-bottom: 10px;
-  //   margin: 0;
-  //   padding: 0;
-  //   height: 50px;
-  //   width: 100%;
-  //   background-color: ${props => props.theme.colors.primaryAccent};
 `;
 
 export const HomeNavLink = styled(NavLink)`

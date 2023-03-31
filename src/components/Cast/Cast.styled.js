@@ -4,6 +4,7 @@ export const CastListContainer = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
+  
   padding-bottom: 24px;
   background-color: ${props => props.theme.colors.backgroundPrimary};
   list-style-type: none;

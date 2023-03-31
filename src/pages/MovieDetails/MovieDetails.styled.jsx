@@ -56,7 +56,7 @@ export const GoBackNavLinkContainer = styled.div`
   outline: none;
   border-radius: ${props => props.theme.borderRadius.sm};
 
-  background-color: ${props => props.theme.colors.primaryAccent};
+  background-color: ${props => props.theme.colors.secondaryAccent};
   box-shadow: ${props => {
     return ` 0 1px 3px ${props.theme.colors.secondaryAccent}`;
   }};

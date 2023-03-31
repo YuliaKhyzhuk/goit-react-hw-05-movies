@@ -16,7 +16,7 @@ export const SearchFormButton = styled.button`
   outline: none;
   border-radius: ${props => props.theme.borderRadius.sm};
   color: ${props => props.theme.colors.secondaryWhite};
-  background-color: ${props => props.theme.colors.primaryAccent};
+  background-color: ${props => props.theme.colors.secondaryAccent};
   box-shadow: ${props => {
     return ` 0 1px 3px ${props.theme.colors.secondaryAccent}`;
   }};
@@ -46,9 +46,10 @@ padding: 8px;
 font-size: 15px;
 font-weight: bold;
 cursor: pointer;
-background-color: ${props => props.theme.colors.secondaryWhite};
-box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryAccent};
-border: 1px solid ${props => props.theme.colors.secondary};
+color: ${props => props.theme.colors.secondaryWhite};
+background-color: ${props => props.theme.colors.middleAccent};
+box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryWhite};
+border: 3px solid ${props => props.theme.colors.primaryAccent};
 border-radius: ${props => props.theme.borderRadius.sm};
 transition: ${props => props.theme.transition};
 

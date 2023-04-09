@@ -12,25 +12,30 @@ export const HomeNavLink = styled(NavLink)`
   font-size: 25px;
   font-weight: bald;
   color: ${props => props.theme.colors.secondaryWhite};
-  margin-bottom: 10px;
-//   padding-left: (100% - 71px) / 2);
-//   padding-right: (100% - 71px) / 2);
-//   padding-top: auto;
-//   padding-bottom: auto;
+  // margin-bottom: 10px;
+  display: block;
 
-
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  outline: none;
+  border-radius: 4px;
+  background-color: rgb(0, 76, 76);
+  box-shadow: rgb(0, 128, 128) 0px 1px 3px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+  width: 100%;
 `;
 
 export const HomeNavLinkContainer = styled.div`
-  //   display: inline-block;
   width: 50%;
   margin-bottom: 10px;
-  padding: 25px;
-  margin-right: 10px;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 15px;
+  // padding: 25px;
+  // margin-right: 10px;
+  // text-align: center;
+  // font-weight: bold;
+  // cursor: pointer;
+  // font-size: 15px;
   outline: none;
   border-radius: ${props => props.theme.borderRadius.sm};
 
@@ -49,24 +54,31 @@ export const MoviesNavLink = styled(NavLink)`
   font-size: 25px;
   font-weight: bald;
   color: ${props => props.theme.colors.secondaryWhite};
-  margin-bottom: 10px;
-  //   padding-left: 25%;
-  //   padding-right: 25%;
-
+  // margin-bottom: 10px;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  outline: none;
+  border-radius: 4px;
+  background-color: rgb(0, 76, 76);
+  box-shadow: rgb(0, 128, 128) 0px 1px 3px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+  width: 100%;
 `;
 
 export const MoviesLinkContainer = styled.div`
-  //   display: inline-block;
   width: 50%;
   margin-bottom: 10px;
 
-  padding: 25px;
+  // padding: 25px;
 
-  font-weight: bold;
-  text-align: center;
+  // font-weight: bold;
+  // text-align: center;
 
-  cursor: pointer;
-  font-size: 15px;
+  // cursor: pointer;
+  // font-size: 15px;
   outline: none;
   border-radius: ${props => props.theme.borderRadius.sm};
 
